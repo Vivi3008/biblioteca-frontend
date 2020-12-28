@@ -25,8 +25,11 @@ export const Button = styled.a`
     padding: 10px;
     border: solid 2px #fff;
     border-radius: 5px;
+    transition: 600ms;
 
     &:hover{
-        transform: scaleX(1);
+        border: solid 4px #FFF;
+        padding:12px;
+        font-size: 20px;
     }
 `
