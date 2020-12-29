@@ -12,19 +12,33 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-    width: 275px;
+    width: 370px;
+    padding: 20px;
     background: #fff;
     box-shadow: 6px 7px 10px 7px #afaeae;
     border-radius:8px;
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-between;
+    
 `
-
 export const Icones = styled.div`
-    width: 275px;
+    margin: 20px;
+    width: 370px;
     height: auto;
     display: flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:space-around;
 `
-
-
+export const Titulo = styled.h1`
+    margin: 20px;
+    text-align:center;
+    font-size: 18px;
+    color:#2e2d2d;
+`
+export const P = styled.p`
+    margin:7px;
+    font-size: 14px;
+    color: #2e2d2d;
+`
