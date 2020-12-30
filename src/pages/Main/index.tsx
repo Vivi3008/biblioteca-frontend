@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { FiEdit, FiTrash2 } from 'react-icons/fi'
-import {useParams} from 'react-router-dom'
-import { Container, Card, Icones, Titulo, P} from './style'
+
+
+import { Container, Card, Icones, Titulo, P, Button} from './style'
 
 import api from '../../services/api'
 
@@ -15,18 +16,31 @@ interface Book {
     >
 }
 
+
 const Main: React.FC = () => {
     const [books, setBooks] = useState<Book[]>()
 
 
+    
 useEffect(()=>{
     api.get('/list').then(({data})=>{
        setBooks(data)
-
     })
-}, [])
+}, [books])
 
-
+function deleteBook(id: string){
+  if(window.confirm("Tem certeza que deseja excluir o livro?")){
+    let password = prompt("Digite a senha:")
+    if(password === '519813') {
+      api.delete(`delete/${id}`).then(()=>{
+        alert('Livro excluído com sucesso!')
+      })
+    } else {
+      alert('Senha Incorreta! Não foi possível excluir o livro!')
+    }
+      
+  }
+}
 
   return (
       <Container>
@@ -45,10 +59,13 @@ useEffect(()=>{
                
                 <Icones>
                   
-                  <a href="#"><FiEdit size={30} color="rgba(5,60,255,1)"/></a>
-                  <a href={`https://devchallenge-biblioteca.herokuapp.com/delete/${book._id}`}>
-                    <FiTrash2 size={30} color="red"/>
-                  </a>
+                 <Button>
+                   <FiEdit size={20} color="rgba(5,60,255,1)"/>
+                   </Button>
+
+                 <Button onClick={()=> deleteBook(book._id)}>
+                   <FiTrash2 size={20} color="red"/>
+                 </Button>
 
                 </Icones>
                   
@@ -57,6 +74,8 @@ useEffect(()=>{
       
               )
           })}
+
+         
  
       </Container>
   );

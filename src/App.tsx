@@ -1,13 +1,13 @@
 
 import Header from './components/Header'
-import Main from  './components/Main'
+import Routes from './routes'
 import './global.css'
 
 function App() {
   return (
     <div className="principal">
         <Header/>
-        <Main/>
+        <Routes/>
     </div>
   );
 }
