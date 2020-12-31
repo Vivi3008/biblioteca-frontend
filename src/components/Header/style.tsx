@@ -10,11 +10,10 @@ export const Container = styled.div`
     left:0;
     right:0;
    
-
     height: 100px;
     padding: 20px;
-    background: rgb(5,60,255);
-    background: linear-gradient(90deg, rgba(5,60,255,1) 28%, rgba(255,187,68,1) 76%);
+    background: #5364bb;
+    /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
 `;
 
 
@@ -27,6 +26,8 @@ export const Button = styled.a`
     font-size:18px;
     color:#fff;
     text-decoration:none;
+    background: transparent;
+    cursor:pointer;
     padding: 10px;
     border: solid 2px #fff;
     border-radius: 5px;
