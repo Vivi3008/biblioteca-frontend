@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
+export const Box = styled.div`
+    margin: 130px auto;
+    width:auto;
+  
+`
+
 export const Container = styled.div`
-   
     width: 1200px;
-    margin: 100px auto;
+    margin: auto;
     padding: 20px;
 
     display: grid;
@@ -60,3 +65,24 @@ export const Button = styled.button`
         transform: scale(1.2)
     }
 `;
+
+
+export const Plus = styled.button`
+    margin:10px 1100px;
+    width:120px;
+    height:auto;
+    border:none;
+    border-radius: 5px;
+    background:transparent;
+    transition: 500ms;
+    cursor: pointer;
+
+    display: flex;
+    align-items:center;
+    justify-content:center;
+
+    &:hover{
+        transform: scale(1.1)
+    }
+`;
+

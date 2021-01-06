@@ -13,7 +13,7 @@ export const Container = styled.div`
     height: 100px;
     padding: 20px;
     background: #5364bb;
-    /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
 `;
 
 

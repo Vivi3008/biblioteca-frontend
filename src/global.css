@@ -6,5 +6,15 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #cecece;
+    background: rgb(238, 183, 207);
+    background: linear-gradient(180deg, rgba(238, 183, 207, 1) 0%, rgba(214, 184, 214, 1) 50%, rgba(148, 187, 233, 1) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }

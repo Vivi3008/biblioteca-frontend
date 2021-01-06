@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
+import Header from './components/Header'
 import Main from './pages/Main'
 import AddLivro from './pages/AddLivro'
-import Nova from './pages/Nova'
 
 
 const Routes = () => {
@@ -10,9 +9,9 @@ const Routes = () => {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Main}/>
-                <Route path='add'  component={AddLivro}/>
+                <Route path='/add' exact  component={AddLivro}/>
+                <Route path='/header' exact component={Header}/>
                    
-                <Route path='nova' component={Nova}/>
                     
             </Switch>
         </BrowserRouter>
